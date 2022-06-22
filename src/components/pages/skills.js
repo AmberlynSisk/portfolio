@@ -1,5 +1,5 @@
 import React from 'react';
-// import Zoom from 'react-reveal/Zoom';
+import { Zoom } from "react-awesome-reveal";
 
 const Skills = () => {
   return (
@@ -12,7 +12,7 @@ const Skills = () => {
             <h1 className="SkillsTitle">Tools</h1>
         </div>
         <div className="SkillsHero">
-            {/* <Zoom top cascade> */}
+            <Zoom top cascade duration={500}>
             <ul className="SkillsCol" style={{
                 borderRight: "1px solid white"
             }}>
@@ -21,8 +21,8 @@ const Skills = () => {
                 <li className="Skill">JavaScript</li>
                 <li className="Skill">ReactJS</li>
             </ul>
-            {/* </Zoom> */}
-            {/* <Zoom top cascade delay={1000}> */}
+            </Zoom>
+            <Zoom top cascade duration={500} delay={1000}>
             <ul className="SkillsCol">
                 <li className="Skill">Python3</li>
                 <li className="Skill">Flask</li>
@@ -30,8 +30,8 @@ const Skills = () => {
                 <li className="Skill">SQL Database</li>
                 <li className="Skill">Redis</li>
             </ul>
-            {/* </Zoom> */}
-            {/* <Zoom top cascade delay={2000}> */}
+            </Zoom>
+            <Zoom top cascade duration={500} delay={2000}>
             <ul className="SkillsCol" style={{
                 borderLeft: "1px solid white"
             }}>
@@ -40,7 +40,7 @@ const Skills = () => {
                 <li className="Skill">Git</li>
                 <li className="Skill">JSON</li>
             </ul>
-            {/* </Zoom> */}
+            </Zoom>
         </div>
     </div>
 
