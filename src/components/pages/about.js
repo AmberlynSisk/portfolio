@@ -2,7 +2,7 @@ import React from 'react';
 import { RiDownloadLine } from 'react-icons/ri';
 import AboutPic from '../images/about.jpg';
 import { Roll } from "react-awesome-reveal";
-import Resume from '../downloads/Amberlyn_Sisk_Resume.PDF';
+import Resume from '../downloads/updated_resume_0822.pdf';
 
 const About = () => {
   return (
@@ -19,7 +19,7 @@ const About = () => {
           <div className="LeftSide">
             <Roll duration={2000}>
             <p>
-                I am a dedicated and hardworking US Army Veteran that recently found my passion in Software Development. I pride myself on my extreme attention to detail and love to experiement with code. I graduated from Bottega University with a certificate in Full Stack Development.
+                I am a dedicated and hardworking US Army Veteran that found my passion in Software Development. I pride myself on my extreme attention to detail and love to experiement with code. I graduated from Bottega University with a certificate in Full Stack Development and currently work as a Full Stack Developer for VacationCandy.com
             </p>
             </Roll>
           </div>
