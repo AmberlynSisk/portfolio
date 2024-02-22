@@ -1,31 +1,22 @@
-import React from 'react';
-import { RiDownloadLine } from 'react-icons/ri';
-import AboutPic from '../images/about.jpg';
-import { Roll } from "react-awesome-reveal";
-import Resume from '../downloads/updated_resume_0822.pdf';
+import React from "react";
 
 const About = () => {
   return (
     <div className="AboutContainer" id="about">
-        <div className="stars"></div>
-        <div className="twinkling"></div>
-        <div className="AboutHeader">
-            <a className="AboutBtn" href={Resume} download> <RiDownloadLine /> Resume </a>
+      <div className="AboutHero">
+        <div className="LeftSide">
+          <h2>Hello! I'm Amberlyn!</h2>
+          <p>
+            I am a dedicated and hardworking US Army Veteran that found my
+            passion in Software Development. I pride myself on my extreme
+            attention to detail and love to experiment with code. I graduated
+            from Bottega University with a certificate in Full Stack Development
+            and currently working on my Bachelor's degree from DeVry University.{" "}
+          </p>
         </div>
-        <div className="AboutHero">
-          <div className="RightSide">
-            <img src={AboutPic} alt="about-pic" />
-          </div>
-          <div className="LeftSide">
-            <Roll duration={2000}>
-            <p>
-                I am a dedicated and hardworking US Army Veteran that found my passion in Software Development. I pride myself on my extreme attention to detail and love to experiement with code. I graduated from Bottega University with a certificate in Full Stack Development and currently work as a Full Stack Developer for VacationCandy.com
-            </p>
-            </Roll>
-          </div>
-        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

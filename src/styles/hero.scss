@@ -1,109 +1,91 @@
 .HeroContainer {
-    background: #0c0c0c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
-    height: calc(100vh - 80px);
-    position: relative;
-    z-index: 1;
+  background: #03102d url("../components/images/tech_pic.jpg") no-repeat fixed
+    center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  height: calc(100vh - 80px);
+  position: relative;
+  z-index: 1;
+  background-position: fixed;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%), linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
-        z-index: 2;
-    }
-    
-    .HeroBg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      ),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+    z-index: 2;
+  }
+
+  .HeroContentGrid {
+    background-color: white;
+    width: 65%;
+    height: 80%;
+    z-index: 3;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .HeroLeft {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
         width: 100%;
-        height: 100%;
-        overflow: hidden;
-
-        video {
-            width: 100%;
-            height: 100%;
-            -o-object-fit: cover;
-            object-fit: cover;
-            background: #232a34;
-        }
+        object-fit: contain;
+        filter: grayscale(90%);
+      }
     }
 
-    .HeroContent {
-        z-index: 3;
-        max-width: 1200px;
-        position: absolute;
-        padding: 8px 24px;
+    .HeroRight {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 20%;
+
+      .HeroTitle {
+        margin-bottom: 10%;
+      }
+
+      .HeroInfo {
+        margin-bottom: 5%;
+
+        .title {
+          font-weight: bold;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+      }
+
+      .Socials {
         display: flex;
-        flex-direction: column;
-        align-items: center;
 
-        .HeroH1 {
-            color: #fff;
-            font-size: 56px;
-            text-align: center;
-            font-weight: 300;
-        
-            @media screen and (max-width: 768px) {
-                font-size: 40px;
-            }
-        
-            @media screen and (max-width: 480px) {
-                font-size: 32px;
-            }        
+        a {
+          color: #000;
+          font-size: 2em;
+          text-decoration: none;
+          margin-right: 10px;
         }
-
-        .HeroP {
-            margin-top: 24px;
-            color: #fff;
-            font-size: 24px;
-            text-align: center;
-            max-width: 600px;
-        
-            @media screen and (max-width: 768px) {
-                font-size: 24px;
-            }
-        
-            @media screen and (max-width: 480px) {
-                font-size: 18px;
-            }        
-        }
-
-        .HeroBtnWrapper {
-            margin-top: 32px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .Button {
-                border-radius: 50px;
-                background: #64E9EE;
-                white-space: nowrap;
-                padding: 14px 48px;
-                color: #010606;
-                font-size: 20px;
-                outline: none;
-                border: none;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transition: all 0.2s ease-in-out;
-            
-                &:hover {
-                    transition: all 0.2s ease-in-out;
-                    background: #fff;
-                }
-            }
-        }
+      }
     }
+  }
 }

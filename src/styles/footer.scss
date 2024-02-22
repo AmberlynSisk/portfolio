@@ -1,0 +1,29 @@
+.FooterContainer {
+  background: #fff;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .FooterLogo {
+    img {
+      height: 60px;
+      padding-right: 20px;
+    }
+  }
+
+  .Socials {
+    a {
+      text-decoration: none;
+      color: #000;
+      height: 80px;
+      width: 80px;
+      padding-right: 20px;
+    }
+  }
+
+  .CopyRight {
+    font-size: 0.9em;
+  }
+}
