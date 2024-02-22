@@ -1,151 +1,70 @@
 .ContactContainer {
-    width: 100vw;
-    height: calc(100vh - 80px);
-    background: #F5F5F5;
+  background: #03102d url("../components/images/white-bg.jpg") no-repeat fixed
+    center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  box-shadow: inset 0 4px 2px -2px gray;
+
+  .GridSection {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    position: relative;
+    height: 100%;
+    width: 100%;
+  }
 
-    .FormContainer {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .ContactLeft {
+    line-height: 1.5;
 
-        form {
-            z-index: 5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 40%;
-            height: 65%;
-            padding: 40px;
-            border: 1px solid #fff;
-            border-radius: 20px;
-            color: #fff;
+    .ContactInfo {
+      .ContactName {
+        font-size: 30px;
+      }
 
-            @media screen and (max-width: 540px) {
-                width: 70%;
-                height: 80%;
-                padding: 10px;
-            }
+      .ContactSubName {
+        font-size: 16px;
+        font-weight: 200;
+        margin-bottom: 20px;
+      }
 
-            @media screen and (max-height: 600px) {
-                width: 60%;
-                height: 80%;
-            }
+      .Info {
+        font-size: 16px;
+        font-weight: 200;
+        margin-bottom: 6px;
+      }
 
-            h1 {
-                margin-bottom: 20px;
-                text-align: center;
+      .Socials {
+        border-top: 1px solid #000;
+        padding-top: 10px;
 
-                @media screen and (max-width: 540px) {
-                    margin-bottom: 15px;
-                    font-size: 1.5em;
-                }
-            }
-
-            input {
-                width: 80%;
-                height: 35px;
-                margin-bottom: 15px;
-                border-top: 0px;
-                border-left: 0px;
-                border-right: 0px;
-                border-bottom: 1px solid #fff;
-                font-size: 1.2em;
-                background: transparent;
-                color: #fff;
-                padding-left: 20px;
-
-                &:focus {
-                    outline: none;
-                    border-bottom: 1px solid #64E9EE;
-                }
-            }
-
-            textarea {
-                width: 80%;
-                height: 100px;
-                margin-bottom: 25px;
-                border: 1px solid #fff;
-                font-size: 1.2em;
-                background: transparent;
-                color: #fff;
-                padding-left: 20px;
-
-                &:focus {
-                    outline: none;
-                    border: 1px solid #64E9EE;
-                }
-
-                @media screen and (max-width: 540px) {
-                    margin-bottom: 15px;
-                }
-            }
-
-            button {
-                color: #fff;
-                background: transparent;
-                font-size: 1.3em;
-                border: 1px solid #fff;
-                padding: 10px;
-
-                &:hover {
-                    background: #64E9EE;
-                    color: #000;
-                    border: 1px solid transparent;
-                }
-            }
+        a {
+          color: #000;
+          font-size: 1.6em;
+          text-decoration: none;
         }
+      }
     }
+  }
 
-    a {
-        color: #fff;
-        font-size: 1.2em;
-        text-decoration: none;
-        z-index: 5;
-        margin-top: -80px;
+  .ContactRight {
+    box-shadow: inset 0 0 2px 2px gray;
+    background: #fff;
+    height: 100%;
+    width: 100%;
 
-        @media screen and (max-width: 540px) {
-            margin-top: -120px;
-        }
+    form {
+      display: grid;
+      height: 100%;
+      width: 100%;
+      padding: 40px;
     }
-
-    h2 {
-        color: #fff;
-        z-index: 5;
-        text-align: center;
-    }
-}
-
-@keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-
-.stars, .twinkling {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
-}
-
-.stars {
-  background:#000 url('../components/images/stars.png') repeat top center;
-  z-index:0;
-}
-
-.twinkling{
-  background:transparent url('../components/images/twinkling.png') repeat top center;
-  z-index:1;
-  animation:move-twink-back 200s linear infinite;
+  }
 }
