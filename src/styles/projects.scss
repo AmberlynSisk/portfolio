@@ -13,6 +13,10 @@
   align-items: center;
   overflow: hidden;
 
+  @media screen and (max-width: 1024px) {
+    transition: all 0.8s ease;
+  }
+
   .ProjectsTitle {
     display: flex;
     flex-direction: column;
@@ -23,6 +27,10 @@
     border-bottom: 1px solid #54859f;
     line-height: 1.8;
 
+    @media screen and (max-width: 375px) {
+      padding: 0 20px 0 20px;
+    }
+
     h4 {
       font-weight: 300;
       font-size: 1.2em;
@@ -30,6 +38,67 @@
 
     p {
       font-weight: 300;
+    }
+  }
+
+  .ProjectsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    width: 100vw;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 375px) {
+      gap: 5px;
+    }
+
+    .ProjectWrapper {
+      .ProjectImage {
+        img {
+          width: 500px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+
+          @media screen and (max-width: 500px) {
+            width: 350px;
+          }
+
+          @media screen and (max-width: 375px) {
+            width: 250px;
+            margin-bottom: 0px;
+          }
+        }
+      }
+
+      .ProjectTitle {
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: 600;
+
+        @media screen and (max-width: 375px) {
+          font-size: 1em;
+        }
+      }
+
+      .ProjectLink {
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: #000;
+          transition: 1s ease-in-out;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }
